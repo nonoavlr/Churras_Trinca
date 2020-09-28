@@ -6,6 +6,7 @@ Essential packages
 ---------------------------------------------------------
 
 cd ./client yarn add react-router-dom
+
 cd ./client npm install react-bootstrap bootstrap
 
 cd ../
@@ -13,6 +14,7 @@ cd ../
 cd ./server 
 
 npm install nodemon -D
+
 npm install express
 
 npm install mongoose
