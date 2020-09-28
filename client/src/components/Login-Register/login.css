@@ -1,0 +1,62 @@
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    margin-top: 5%;
+    background-color: rgb(255, 255, 255);
+    height: 80%;
+    border-radius: 2%;
+}
+
+#div_form{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 237, 52);
+    width: 500px;
+    height: 300px;
+    
+}
+
+#div_all{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 1000;
+    height: 600px;
+}
+
+#email_label{
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+#email_input{
+    display: flex;
+    align-self: center;
+    margin-top: 3px;
+}
+
+#password_label{
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+#password_input{
+    display: flex;
+    align-self: center;
+    margin-top: 3px;
+}
+
+#button_submit{
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+    width: 50%;
+    justify-content: center;
+    border: transparent;
+    background-color: rgb(250, 237, 52);
+}

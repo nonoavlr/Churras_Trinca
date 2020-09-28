@@ -1,0 +1,11 @@
+#churras_div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2%;
+    flex-flow: column, 1;
+    flex-grow: 1;
+}
+
+
