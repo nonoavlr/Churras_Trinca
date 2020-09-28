@@ -7,7 +7,7 @@ Essential packages
 
 cd ./client yarn add react-router-dom
 
-cd ./client npm install react-bootstrap bootstrap
+npm install react-bootstrap bootstrap
 
 cd ../
 
