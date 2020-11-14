@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Downloading latest repository code
+        uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12.x
+        
+      - name: Install client npm dependencies
+        run: |
+          cd client
+          npm install
+          
+      - name: copy client build to GCP
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "client/build"
+          target: "app-churras/client"
+
+      - name: copy server folder to GCP
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "server"
+          target: "app-churras/server"
+
+
+          
+        
+      #Instalar as dependências do yarn ou npm para React
+      #Copiar todos os arquivos gerados na pasta build para nosso servidor no Google Cloud Plataform
+      #Copiar arquivos do backend para nosso servidor no GCP
+      #Reiniciar nossos serviços do frontend e backend
