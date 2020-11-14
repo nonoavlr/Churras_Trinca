@@ -33,7 +33,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "client/build"
-          target: "app-churras/client"
+          target: "~/app-churras/client"
 
       - name: copy server folder to GCP
         uses: appleboy/ssh-action@master
@@ -43,7 +43,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "server"
-          target: "app-churras/server"
+          target: "~/app-churras/server"
 
 
           
