@@ -19,6 +19,11 @@ jobs:
         run: |
           cd client
           npm install
+
+      - name: Generate client build
+        run: |
+          cd client
+          npm run build
           
       - name: copy client build to GCP
         uses: appleboy/ssh-action@master
